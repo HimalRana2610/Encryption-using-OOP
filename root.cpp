@@ -1,8 +1,65 @@
 #include <iostream>
+<<<<<<< HEAD
 #include <cstring>
 #include <cmath>
 
 
+=======
+// #include <openssl/aes.h>
+// #include <openssl/ec.h>
+// #include <openssl/obj_mac.h>
+#include <cstring>
+#include <cmath>
+
+// // AES class for encryption and decryption
+// class AES {
+// public:
+//     AES(const unsigned char* key) {
+//         AES_set_encrypt_key(key, 128, &encryptKey);  // Set the encryption key (128-bit)
+//         AES_set_decrypt_key(key, 128, &decryptKey);  // Set the decryption key
+//     }
+
+//     void encrypt(const unsigned char* plaintext, unsigned char* ciphertext) {
+//         AES_encrypt(plaintext, ciphertext, &encryptKey);
+//     }
+
+//     void decrypt(const unsigned char* ciphertext, unsigned char* decryptedText) {
+//         AES_decrypt(ciphertext, decryptedText, &decryptKey);
+//     }
+
+// private:
+//     AES_KEY encryptKey, decryptKey;
+// };
+
+// // ECC class for encryption and decryption (using OpenSSL)
+// class ECC {
+// public:
+//     ECC() {
+//         // Initialize elliptic curve key
+//         ecKey = EC_KEY_new_by_curve_name(NID_X9_62_prime256v1);
+//         EC_KEY_generate_key(ecKey);
+//     }
+
+//     ~ECC() {
+//         EC_KEY_free(ecKey);
+//     }
+
+//     void encrypt() {
+//         // ECC typically used in ECDH or ECDSA
+//         std::cout << "ECC encryption operation (placeholder)\n";
+//     }
+
+//     void decrypt() {
+//         // ECC decryption example
+//         std::cout << "ECC decryption operation (placeholder)\n";
+//     }
+
+// private:
+//     EC_KEY* ecKey;
+// };
+
+// Custom RSA class (without any library)
+>>>>>>> bfabe359bcd114242cc00630b1a5c6871fe1ae86
 class RSA {
 public:
     RSA(int p, int q) {
@@ -75,10 +132,38 @@ private:
 };
 
 int main() {
+<<<<<<< HEAD
    
     int p = 61, q = 53;  // Two large prime numbers
     RSA rsa(p, q);
 
+=======
+    // // AES Testing
+    // unsigned char key[16] = "0123456789abcdef";  // AES key (128 bits)
+    // unsigned char plaintext[16] = "HelloAESWorld12";  // Test plaintext
+    // unsigned char ciphertext[16];
+    // unsigned char decryptedText[16];
+
+    // AES aes(key);
+    // aes.encrypt(plaintext, ciphertext);
+    // aes.decrypt(ciphertext, decryptedText);
+
+    // std::cout << "AES Decrypted text: ";
+    // for (int i = 0; i < 16; i++) {
+    //     std::cout << decryptedText[i];
+    // }
+    // std::cout << std::endl;
+
+    // // ECC Testing
+    // ECC ecc;
+    // ecc.encrypt();
+    // ecc.decrypt();
+
+    // RSA Testing
+    int p = 61, q = 53;  // Two large prime numbers
+    RSA rsa(p, q);
+
+>>>>>>> bfabe359bcd114242cc00630b1a5c6871fe1ae86
     int message = 65;  // Example message
     int encryptedMessage = rsa.encrypt(message);
     int decryptedMessage = rsa.decrypt(encryptedMessage);
